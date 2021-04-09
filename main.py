@@ -52,7 +52,6 @@ def generate_keyboard(keyboard):
 
 keyboard = generate_keyboard(vk_api.keyboard.VkKeyboard(**settings))
 for event in longpoll.listen():
-    print(event.type)
     try:
         if event.type == VkBotEventType.MESSAGE_NEW:
             if event.from_user:
