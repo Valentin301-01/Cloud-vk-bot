@@ -19,7 +19,7 @@ from config import token, version, gid
 vk = vk_api.VkApi(token=token)
 vk._auth_token()
 longpoll = VkBotLongPoll(vk, gid)
-vk = vk.get_api()
+vk = vk_session.get_api()
 settings = dict(one_time=False, inline=True)
 f_toggle: bool = False
 
